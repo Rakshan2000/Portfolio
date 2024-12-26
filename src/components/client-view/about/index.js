@@ -32,7 +32,7 @@ const skillItemVariant = {
 };
 
 export default function ClientAboutView({ data }) {
-  console.log(data, "aboutdata");
+  //console.log(data, "aboutdata");
 
   const setVariants = useMemo(() => variants(), []);
 
@@ -74,7 +74,7 @@ export default function ClientAboutView({ data }) {
             >
               <div className="flex m-0 w-40 sm:w-auto">
                 <div className="flex flex-col">
-                  <p className="text-[50px] text-green-main font-bold">
+                  <p className="text-[50px] text-yellow-main font-bold">
                     {infoItem.value}+
                   </p>
                   <p className="text-[25px] font-bold text-[#000000]">
@@ -91,7 +91,7 @@ export default function ClientAboutView({ data }) {
           <h1 className="leading-[70px] mb-4 text-3xl lg:text-4xl xl:text-5xl font-medium">
             {headingText.split(" ").map((item, index) => (
               <span
-                className={`${index === 6 ? "text-green-main" : "text-[#000]"}`}
+                className={`${index === 6 ? "text-yellow-main" : "text-[#000]"}`}
               >
                 {item}{" "}
               </span>
@@ -125,7 +125,7 @@ export default function ClientAboutView({ data }) {
                   className="w-full flex justify-center items-center"
                   variants={skillItemVariant}
                 >
-                    <button className="whitespace-nowrap text-ellipsis overflow-hidden py-3 w-[160px] px-6 border-[2px] border-green-main bg-[#fff] text-[#000] font-semibold rounded-lg text-xl tracking-widest hover:shadow-green-main transition-all outline-none">
+                    <button className="whitespace-nowrap text-ellipsis overflow-hidden py-3 w-[160px] px-6 border-[2px] border-yellow-main bg-[#fff] text-[#000] font-semibold rounded-lg text-xl tracking-widest hover:shadow-yellow-main transition-all outline-none">
                   {skill}
                 </button>
                 </motion.div>

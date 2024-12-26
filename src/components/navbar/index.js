@@ -19,7 +19,7 @@ const menuItems =[
         label : 'Experience'
     },
     {
-        id: 'experience',
+        id: 'education',
         label : 'Education'
     },
     {
@@ -31,6 +31,7 @@ const menuItems =[
 function CreateMenus({activeLink,setActiveLink,getMenuItems}){
     return getMenuItems.map(item => 
     <LinkScroll 
+    key={item.id}
     activeClass="active"
     to={item.id}
     spy = {true}
@@ -38,7 +39,7 @@ function CreateMenus({activeLink,setActiveLink,getMenuItems}){
     duration={1000}
     onSetActive={()=> setActiveLink(item.id)}
     className={`px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative
-        ${activeLink === item.id ? "text-green-main animation-active shadow-green-main" : "text-[#000] font-bold hover:text-green-main"}`
+        ${activeLink === item.id ? "text-yellow-main font-bold animation-active shadow-yellow-300" : "text-[#000] font-bold hover:text-yellow-main"}`
     }
     onClick={() => setActiveLink(item.id)}
     >
@@ -60,8 +61,8 @@ export default function NavBar() {
         <header className={`fixed top-0 w-full z-30 bg-white-500 transition-all ${scrollActive ? "shadow-sm pt-0" : "pt-4"}`}>
             <nav className="max-w-screen-xl px-6 sm:px-16 mx-auto grid grid-flow-col py-3 sm:py-4">
                 <div className="col-start-1 col-end-2 flex items-center justify-evenly">
-                    <div className="cursor-pointer flex gap-2 font-bold items-center text-[20px] text-green-500">
-                        <div className="w-[40px] h-[40px] flex justify-center items-center p-3 rounded-[8px] border-green-main bg-green-main">
+                    <div className="cursor-pointer flex gap-2 font-bold items-center text-[20px] text-yellow-main">
+                        <div className="w-[40px] h-[40px] flex justify-center items-center p-3 rounded-[8px] border-yellow-main bg-yellow-main">
                             <span className="text-[#fff] text-[25px] font-bold">P</span>
                         </div>
                         ortfolio
@@ -75,7 +76,7 @@ export default function NavBar() {
                     </ul>
                     <div className="col-start-10 col-end-12 font-medium flex justify-center items-center">
                         <button onClick={()=>{
-                            setActiveLink(false)
+                            setActiveLink('contact');
                             scroller.scrollTo('Contact', {
                                 duration: 1500,
                                 delay: 100,
@@ -83,7 +84,7 @@ export default function NavBar() {
                                  // Scrolls to element + 50 pixels down the page
                                 // ... other options
                               });
-                        }}className="py-3 px-6 border-[2px] bg-[#fff] border-green-main text-[#000] font-semibold rounded-lg text-xl tracking-widest hover:shadow-green-main transition-all outline-none">
+                        }} className="py-3 px-6 border-[2px] bg-[#fff] border-yellow-main text-[#000] font-semibold rounded-lg text-xl tracking-widest hover:shadow-yellow-main transition-all outline-none">
                             Contact Me
                         </button>
                     </div>

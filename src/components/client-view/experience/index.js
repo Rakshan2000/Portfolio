@@ -15,7 +15,7 @@ export default function ClientExperienceAndEducationView({
   educationData,
   experienceData,
 }) {
-  console.log(educationData, experienceData, "experienceData");
+  //console.log(educationData, experienceData, "experienceData");
 
   return (
     <div
@@ -30,7 +30,7 @@ export default function ClientExperienceAndEducationView({
                 {"My Experince".split(" ").map((item, index) => (
                   <span
                     className={`${
-                      index === 1 ? "text-green-main" : "text-[#000]"
+                      index === 1 ? "text-yellow-main" : "text-[#000]"
                     }`}
                   >
                     {item}{" "}
@@ -45,13 +45,13 @@ export default function ClientExperienceAndEducationView({
                 <Timeline position="right">
                   {experienceData && experienceData.length
                     ? experienceData.map((experienceItem) => (
-                        <TimelineItem>
+                        <TimelineItem key={experienceItem.Company}>
                           <TimelineSeparator>
-                            <TimelineDot className="bg-green-main" />
-                            <TimelineConnector className="bg-green-main" />
+                            <TimelineDot className="bg-yellow-main" />
+                            <TimelineConnector className="bg-yellow-main" />
                           </TimelineSeparator>
                           <TimelineContent>
-                            <div className="border-[2px] p-4 rounded-[8px] border-green-main mt-[14px] ml-[16px]">
+                            <div className="border-[2px] p-4 rounded-[8px] border-yellow-main mt-[14px] ml-[16px]">
                               <p className="font-bold">
                                 {experienceItem.Duration}
                               </p>
@@ -82,7 +82,7 @@ export default function ClientExperienceAndEducationView({
                 {"My Education".split(" ").map((item, index) => (
                   <span
                     className={`${
-                      index === 1 ? "text-green-main" : "text-[#000]"
+                      index === 1 ? "text-yellow-main" : "text-[#000]"
                     }`}
                   >
                     {item}{" "}
@@ -97,13 +97,13 @@ export default function ClientExperienceAndEducationView({
                 <Timeline position="right">
                   {educationData && educationData.length
                     ? educationData.map((educationItem) => (
-                        <TimelineItem>
+                        <TimelineItem key={educationItem.College}>
                           <TimelineSeparator>
-                            <TimelineDot className="bg-green-main" />
-                            <TimelineConnector className="bg-green-main" />
+                            <TimelineDot className="bg-yellow-main" />
+                            <TimelineConnector className="bg-yellow-main" />
                           </TimelineSeparator>
                           <TimelineContent>
-                            <div className="border-[2px] p-4 rounded-[8px] border-green-main mt-[14px] ml-[16px]">
+                            <div className="border-[2px] p-4 rounded-[8px] border-yellow-main mt-[14px] ml-[16px]">
                               <p className="font-bold">
                                 {educationItem.Timeline}
                               </p>

@@ -1,5 +1,6 @@
 "use client";
 
+import './index.css';
 import { useMemo, useRef } from "react";
 import AnimationWrapper from "../animation-wrapper";
 import { motion } from "framer-motion";
@@ -10,7 +11,7 @@ import {
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import Image from "next/image";
-import aiImage from "../assests/img-1.jpg"; // Correctly import the image
+import aiImage from "../assests/CKR.png"; // Correctly import the image
 
 function variants() {
   return {
@@ -35,7 +36,7 @@ const socialIcons = [
     icon: (
       <a href="https://www.facebook.com/rakshanck/" target="_blank" rel="nonopener noreferrer">
       <FaFacebookF
-        color="rgba(13, 183, 96, 1)"
+        color="rgba(253, 216, 53, 1)"
         className="w-[40px] h-[40px] "
       />
       </a>
@@ -45,7 +46,7 @@ const socialIcons = [
     id: "twitter",
     icon: (
       <a href="https://x.com/?lang=en" target="_blank" rel="noopener noreferrer" > 
-      <FaXTwitter color="rgba(13, 183, 96, 1)" className="w-[40px] h-[40px] " />
+      <FaXTwitter color="rgba(253, 216, 53, 1)" className="w-[40px] h-[40px] " />
       </a>
     ),
   },
@@ -54,8 +55,8 @@ const socialIcons = [
     icon: (
       <a href="https://www.linkedin.com/in/rakshanck2000/" target="_blank" rel="noopener noreferrer" >
       <FaLinkedinIn
-        color="rgba(13, 183, 96, 1)"
-        className="w-[40px] h-[40px] "
+        color="rgba(253, 216, 53, 1)"
+        className="w-[40px] h-[40px]"
       />
       </a>
     ),
@@ -65,7 +66,7 @@ const socialIcons = [
     icon: (
       <a href="https://www.instagram.com/rakshan_chillana/" target="_blank" rel="noopener noreferrer">
         <FaInstagram
-          color="rgba(13, 183, 96, 1)"
+          color="rgba(253, 216, 53, 1)"
           className="w-[40px] h-[40px] "
         />
       </a>
@@ -74,7 +75,7 @@ const socialIcons = [
 ];
 
 export default function ClientHomeView({ data }) {
-  console.log(data, "ClientHomeView");
+  //console.log(data, "ClientHomeView");
 
   const setVariants = useMemo(() => variants(), []);
   const containerRef = useRef(null);
@@ -95,9 +96,10 @@ export default function ClientHomeView({ data }) {
                     .split(" ")
                     .map((item, index) => (
                       <span
+                      key={item._id}
                         className={`${
                           index === 2 || index === 3
-                            ? "text-green-main"
+                            ? "text-yellow-300"
                             : "text-[#000]"
                         }`}
                       >
@@ -133,7 +135,7 @@ export default function ClientHomeView({ data }) {
             <motion.div
               drag
               dragConstraints={containerRef}
-              className="w-[400px] h-[400px] relative bg-green-main"
+              className="bg-modification"
             >
               <div className="w-[400px] h-[400px] top-[40px] left-[-30px] rounded-lg border-[6px] border-[#000000] absolute"></div>
               <Image

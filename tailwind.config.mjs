@@ -1,3 +1,5 @@
+import { yellow } from '@mui/material/colors';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -33,6 +35,9 @@ export default {
             400: "#AFB5C0",
             500: "#DDDDDD",
           },
+          yellow :{
+            main : "#FDD835"
+          }
       },
     },
   },

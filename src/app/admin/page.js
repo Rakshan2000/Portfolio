@@ -6,6 +6,7 @@ import AdminEducationView from "@/components/admin-view/education";
 import AdminExperienceView from "@/components/admin-view/experience";
 import AdminHomeView from "@/components/admin-view/home";
 import AdminProjectsView from "@/components/admin-view/projects";
+import AdminCertificateView from "@/components/admin-view/Certificate";
 import Login from "@/components/admin-view/login";
 import { useState, useEffect } from "react";
 import { addData, getData, updateData, login } from "@/services";
@@ -133,6 +134,11 @@ export default function AdminView() {
       label: "Contact",
       Component: <AdminContactView data={allData?.contact}/>,
     },
+    {
+      id: "certificate",
+      label: "Certificate",
+      Component: <AdminCertificateView/>
+    }
   ];
 
   async function extractAllData() {

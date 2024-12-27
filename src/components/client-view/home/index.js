@@ -4,14 +4,16 @@ import './index.css';
 import { useMemo, useRef } from "react";
 import AnimationWrapper from "../animation-wrapper";
 import { motion } from "framer-motion";
+import { CldImage} from "next-cloudinary";
 import {
   FaFacebookF,
   FaLinkedinIn,
   FaInstagram,
+  FaGithub
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import Image from "next/image";
-import aiImage from "../assests/CKR.png"; // Correctly import the image
+//import Image from "next/image";
+//import aiImage from "../assests/CKR.png"; // Correctly import the image
 
 function variants() {
   return {
@@ -43,10 +45,10 @@ const socialIcons = [
     ),
   },
   {
-    id: "twitter",
+    id: "github",
     icon: (
-      <a href="https://x.com/?lang=en" target="_blank" rel="noopener noreferrer" > 
-      <FaXTwitter color="rgba(253, 216, 53, 1)" className="w-[40px] h-[40px] " />
+      <a href="https://github.com/Rakshan2000" target="_blank" rel="noopener noreferrer" > 
+      <FaGithub color="rgba(253, 216, 53, 1)" className="w-[40px] h-[40px] " />
       </a>
     ),
   },
@@ -138,7 +140,7 @@ export default function ClientHomeView({ data }) {
               className="bg-modification"
             >
               <div className="w-[400px] h-[400px] top-[40px] left-[-30px] rounded-lg border-[6px] border-[#000000] absolute"></div>
-              <Image
+              {/* <Image
                 src={aiImage}
                 alt="Profile Picture"
                 layout="responsive"
@@ -146,7 +148,8 @@ export default function ClientHomeView({ data }) {
                 height={300}
                 width={300}
                 className="absolute top-[-15px]"
-              />
+              /> */}
+              <CldImage width="400" height="300" quality={100}  src="h0naxuf2gdpbi6xrjlxa" className="absolute top-[-15px]"/>
             </motion.div>
           </motion.div>
         </motion.div>

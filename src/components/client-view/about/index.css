@@ -1,0 +1,16 @@
+/* index.css */
+.responsive-image-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  
+  @media screen and (min-width: 961px) {
+    .responsive-image-container {
+      height: auto; /* Adjust this as needed for larger screens */
+      padding-left: 4px;
+    }
+    .skill-buttons{
+        font-size: 12px;
+    }
+  }

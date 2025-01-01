@@ -27,6 +27,8 @@ export default async function Home() {
   const clientContactData = await extractAllData("contact")
 
   return (
+
+    
     <div>
       <ClientHomeView data={homeSectionData} />
       <ClientAboutView data={aboutSectionData && aboutSectionData.length ? aboutSectionData[0]: []} />

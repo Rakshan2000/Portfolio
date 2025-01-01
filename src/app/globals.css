@@ -5,7 +5,7 @@
 @tailwind components;
 
 html {
-  font-family: "Rubik", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 body {
   background: bg-white-500

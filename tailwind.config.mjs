@@ -37,7 +37,8 @@ export default {
   				'500': '#DDDDDD'
   			},
   			yellow: {
-  				main: '#FDD835'
+  				main: '#FDD835',
+				Nav : '#FFFECB'
   			},
   			card: {
   				DEFAULT: 'hsl(var(--card))',

@@ -1,6 +1,25 @@
 .bg-modification{
-    width: 400px;
-    height: 400px;
-    position: relative;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background-color: yellow;
+}
+
+@media screen and (max-width: 960px){ 
+.bg-modification{
+    width: 200px;
+    height: 200px;
+    position:relative;
     background-color: yellow;
   }
+
+  .profile-div{
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .div-container{
+    justify-content: start;
+    align-items: center;
+  }
+}
